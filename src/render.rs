@@ -669,7 +669,7 @@ fn render_process(
         .constraints([Constraint::Length(2), Constraint::Min(1)].as_ref())
         .split(layout);
 
-    let title = format!("(b)ack (n)ice (p)riority 0 (s)uspend (r)esume (k)ill [SIGKILL] (t)erminate [SIGTERM] {:} {: >width$}", 
+    let title = format!("(b)ack (n)ice (p)riority 0 (s)uspend (r)esume (k)ill [SIGKILL] (t)erminate [SIGTERM] {:} {: >width$}",
                         process_message.as_ref().unwrap_or(&String::from("")), "", width = layout.width as usize);
 
     Block::default()
@@ -1353,12 +1353,6 @@ struct SectionMGRList<'a> {
 }
 
 impl<'a> SectionMGRList<'a> {
-    pub fn new() -> SectionMGRList<'a> {
-        SectionMGRList {
-            items: Vec::new(),
-            state: ListState::default(),
-        }
-    }
     pub fn with_geometry(geometry: Vec<(Section, f64)>) -> SectionMGRList<'a> {
         info!("Geometry: {:?}", geometry);
         info!("Geometry Len: {:?}", geometry.len());
