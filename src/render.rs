@@ -24,7 +24,6 @@ use std::collections::HashSet;
 use std::fmt;
 use std::io;
 use std::io::Stdout;
-use std::io::Write;
 use std::path::PathBuf;
 use std::time::{Duration, Instant, UNIX_EPOCH};
 use tui::{backend::CrosstermBackend, Terminal};
